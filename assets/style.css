@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 16px;
+}
+/* NAVBAR */
+header {
+    min-height: 10vh;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.nav-container {
+    min-height: 10vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 5%;
+}
+
+.logo-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 60%;
+}
+
+.cart-dp {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 22%;
+}
+
+.burger {
+    background: url(https://deevyn9.github.io/E-Commerce/images/icon-menu.svg) no-repeat;
+    background-size: contain;
+    height: 22px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.logo {
+    background: url(https://deevyn9.github.io/E-Commerce/images/logo.svg) no-repeat;
+    background-size: contain;
+    width: 140px;
+    height: 22px;
+}
+
+.links ul {
+    display: none;
+}
+
+.menu {
+    display: none;
+    min-height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.556);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 500;
+}
+
+.menu.active { 
+    display: flex;
+}
+
+.side-menu {
+    background-color: white;
+    width: 66vw;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+.side-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    background: url(https://deevyn9.github.io/E-Commerce/images/icon-close.svg) no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.side-links ul {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.side-links ul li a {
+    color: black;
+    line-height: 50px;
+    text-decoration: none;   
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cart {
+    background: url(https://deevyn9.github.io/E-Commerce/images/icon-cart.svg) no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-number {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    color: white;
+    height: 18px;
+    width: 18px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 50%;
+    font-size: .7rem;
+}
+
+.cart-number.display {
+    display: flex;
+}
+
+.display-image {
+    background: url(https://deevyn9.github.io/E-Commerce/images/image-avatar.png) no-repeat;
+    background-size: contain;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-self: flex-end;
+}
+/* NAVBAR END */
+
+.cart-card {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 600;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 13px 18px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    top: 10vh;
+    right: 2vh;
+    min-width: 300px;
+    min-height: 200px;    
+}
+
+.prod {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart-card.toggle {
+    display: flex;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: hsla(217, 9%, 45%, 0.178);
+}
+
+.card-head h1 {
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.main-card {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty {
+    padding-top: 10%;
+    color:hsl(219, 9%, 45%);
+}
+
+.empty.disappear {
+    display: none;
+}
+
+.added-product {
+    color: hsl(219, 9%, 45%);
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.added-product p {
+    padding: 0 15px;
+    font-size: 0.82rem;
+}
+
+.cart-thumb {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.total {
+    color: hsl(0, 0%, 0%);
+    font-weight: 550;
+}
+
+.checkout {
+    padding: 0px 20px 20px 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout.appear {
+    display: flex;
+}
+
+.checkout a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 8px;
+}
+
+.shoe {
+    width: 100%;
+    position: relative;
+}
+
+.shoe-slide {
+    display: flex;
+}
+
+.previous {
+    left: 4%;
+}
+
+.previous:hover {
+    left: 3%;
+}
+
+.next {
+    right: 4%;
+}
+
+.next:hover {
+    right: 3%;
+}
+
+.arrow {
+    position: absolute;
+    top: 32%;
+    z-index: 400;
+    height: 100%;
+    max-height: 40px;
+    width: 100%;
+    max-width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.kick-details {
+    padding: 20px 30px;
+}
+
+.company-name {
+    color: hsl(26, 100%, 55%);
+    font-size: .9rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.ltd-edition {
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.shoe-desc {
+    color: hsl(219, 9%, 45%);
+    padding-bottom: 15px;
+    line-height: 25px;
+}
+
+.pricing {
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.discount {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    align-items: center;
+}
+
+.actual-price {
+    font-size: 1.4rem;
+}
+
+.price{
+    color: red;
+    font-size: 1.6rem;
+
+    font-weight: 700;
+}
+.percent-discount {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    margin-left: 10px;
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+}
+
+.old-price {
+    color: hsl(219, 9%, 45%);
+    text-decoration: line-through;
+}
+
+.sub-add {
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+    margin-bottom: 20px;
+}
+
+.filter-white {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    filter: 
+    invert(100%)
+    sepia(20%)
+    saturate(0%)
+    hue-rotate(100deg)
+    brightness(180%)
+    contrast(100%);
+}
+
+.minus, .plus {
+    cursor: pointer;
+}
+
+.add-btn {
+    color: white;
+    cursor: pointer;
+    background-color: hsl(26, 100%, 55%);
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoe-thumbs {
+    display: none;
+}
+
+.attribution { 
+    font-size: 15px; 
+    text-align: center; 
+    display: none;
+}
+    
+.attribution a {
+    color: black; 
+    text-decoration: none;
+}
+
+
+@media (min-width:450px) {
+    .arrow {
+        top: 35%;
+    }
+}
+
+@media (min-width:600px) {
+    .arrow {
+        top: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-container {
+        max-height: 15vh;
+        min-width: 90%;
+        border-bottom: 1px solid hsl(220, 14%, 75%);
+    }
+
+    .burger {
+        display: none;
+    }    
+
+    .menu {
+        display: none;
+    }
+
+    .logo-links {
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 80%;
+    }
+    
+    .cart-dp {
+        justify-content: space-between;
+        width: 13%;
+    }
+
+    .display-image {
+        height: 45px;
+        width: 45px;
+    }
+
+    .cart-card {
+        top: 100px;
+        right: 90px;
+    }
+
+    .links ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        height: 15vh;
+    }
+     
+    .links ul li {
+        list-style: none;
+        cursor: pointer;
+        padding: 0 10px;
+    }
+    
+    .links ul li a {
+        display: flex;
+        align-items: center;
+        height: 15vh;
+        font-size: 1.3rem;
+        color: hsl(219, 9%, 45%);
+        text-decoration: none;
+    }
+    
+   .links ul li a:hover {
+        color: hsl(26, 100%, 55%);
+        border-bottom: 4px solid hsl(26, 100%, 55%);
+    }
+
+    .display-image:hover {
+        border: 2px solid hsl(26, 100%, 55%);
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 60px 0 100px 0;
+        width: 100%;
+        max-width: 90vw;
+    }
+
+    .kicks {
+        width: 100%;
+    }
+
+    .shoe {
+        border-radius: 20px;
+    }
+
+    .shoe-thumbs {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .thumb {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 95px;
+        height: 95px;
+        background-color: rgba(255, 255, 255, 0.651);
+        z-index: 100;
+        border-radius: 10px;
+        visibility: hidden;
+    }
+
+    .show-overlay {
+        visibility: visible;
+        border: 3px solid hsl(26, 100%, 55%);
+    }
+
+    .thumb img {
+        max-height: 100px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .kick-details {
+        width: 100%;
+        padding: 20px 0 0 0;
+
+    }
+
+    .company-name {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        padding: 20px 0 20px 0;
+    }
+
+    .ltd-edition {
+        font-size: 3rem;
+        line-height: 50px;
+        padding-bottom: 40px;
+    }
+
+    .shoe-desc {
+        font-size: 1.05em;
+        line-height: 30px;
+        padding-bottom: 20px;
+    }
+
+    .pricing {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .actual-price {
+        font-size: 1.7rem;
+        margin-right: 5px;
+    }
+
+    .old-price {
+        font-size: 1.25rem;
+        margin-top: 5px;
+    }
+
+    .percent-discount {
+        font-size: 1.3rem;
+    }
+
+    .add-cart {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .sub-add {
+        width: 35%;
+    }
+
+    .add-btn {
+        width: 63%;
+    }
+}
+
+@media (min-width:1080px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .kicks {
+        width: 40%;
+    }
+
+    .kick-details {
+        width: 45%;
+    }
+}
+img{
+    object-fit: cover;
+}
